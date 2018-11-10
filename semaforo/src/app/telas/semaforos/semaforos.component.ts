@@ -7,13 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemaforosComponent implements OnInit {
 
+  semaforos: Array<semaforoInfo> = [];
+  contadorSemaforo = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   click(e: MouseEvent) {
-    alert(`x ${e.x} y ${e.y}`)
+    this.semaforos.push({id: ''+this.contadorSemaforo,status:'fechado',x:e.x,y:e.y});
+    this.contadorSemaforo ++; 
   }
 
+}
+interface semaforoInfo {
+  id: string;
+  status: 'fechado' | 'aberto' | 'atencao';
+  x: number;
+  y: number;
 }

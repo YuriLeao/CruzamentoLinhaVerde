@@ -1,8 +1,5 @@
-<div>
-    <app-semaforo [status]="'aberto'" [posx]="100" [posy]="100"></app-semaforo>
-    <app-semaforo></app-semaforo>
-    <app-semaforo></app-semaforo>
-    <app-semaforo></app-semaforo>
-</div>
-
 <button (mousedown)="click($event)" ></button>
+
+<div>
+    <app-semaforo *ngFor="let semaforo of semaforos" [status]="semaforo.status" [posx]="semaforo.x" [posy]="semaforo.y"></app-semaforo>
+</div>
