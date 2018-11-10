@@ -1,6 +1,39 @@
 div{
     position: absolute;
+    
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: solid 1px black;
+
+    border-radius: 50%;
+
+   
 }
+
+@keyframes piscando {
+    0%{
+        background-color: black;
+        color: white;
+    }
+    50%{
+        background-color: red;
+        color: white;
+    }
+    100%{
+        background-color: black;
+        color: white;
+    }
+}
+
+.pedestre{
+    background: url(pedestre.svg);
+   
+}
+.pedestre.atencao{
+    animation: piscando 1s  infinite;
+}
+
 
 .luz{
     padding: 5px;

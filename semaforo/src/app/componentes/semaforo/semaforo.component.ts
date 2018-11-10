@@ -8,18 +8,36 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SemaforoComponent implements OnInit {
 
   @Input()
-  status:'fechado'|'aberto'|'atencao';
+  status: 'fechado' | 'aberto' | 'atencao';
   @Input()
-  posx:number;
+  posx: number;
   @Input()
-  posy:number;
+  posy: number;
+  @Input()
+  pedestre = false;
 
-  constructor() { 
-    this.status = "fechado";
+  constructor() {
+    this.status = 'fechado';
   }
 
   ngOnInit() {
-    
+
+  }
+
+  cor(status) {
+    switch (status) {
+      case 'aberto':
+        return 'green';
+        break;
+      case 'fechado':
+        return 'red';
+        break;
+      case 'atencao':
+        return 'yellow';
+        break;
+      default:
+        break;
+    }
   }
 
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemaforosComponent implements OnInit {
 
-  semaforos: Array<semaforoInfo> = [];
+  semaforos: Array<SemaforoInfo> = [];
   contadorSemaforo = 0;
 
   constructor() { }
@@ -16,14 +16,16 @@ export class SemaforosComponent implements OnInit {
   }
 
   click(e: MouseEvent) {
-    this.semaforos.push({id: ''+this.contadorSemaforo,status:'fechado',x:e.x,y:e.y});
-    this.contadorSemaforo ++; 
+    console.log(e);
+    this.semaforos.push({ id: '' + this.contadorSemaforo, status: 'fechado', x: e.x - 10, y: e.y - 10, pedestre: e.shiftKey });
+    this.contadorSemaforo++;
   }
 
 }
-interface semaforoInfo {
+interface SemaforoInfo {
   id: string;
   status: 'fechado' | 'aberto' | 'atencao';
+  pedestre: boolean;
   x: number;
   y: number;
 }

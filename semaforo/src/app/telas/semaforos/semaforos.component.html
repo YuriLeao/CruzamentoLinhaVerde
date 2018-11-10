@@ -1,5 +1,6 @@
-<button (mousedown)="click($event)" ></button>
+<button (mousedown)="click($event)"></button>
 
 <div>
-    <app-semaforo *ngFor="let semaforo of semaforos" [status]="semaforo.status" [posx]="semaforo.x" [posy]="semaforo.y"></app-semaforo>
+    <app-semaforo *ngFor="let semaforo of semaforos" [status]="semaforo.status" [posx]="semaforo.x" [posy]="semaforo.y"
+        [pedestre]="semaforo.pedestre"></app-semaforo>
 </div>
