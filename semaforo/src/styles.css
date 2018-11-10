@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+#imageFundo{
+    background-image: url(C:\Users\Avell\Documents\NetBeansProjects\SemaforoLinhaVerde\src\semaforo\cruzamento.png);
+}
