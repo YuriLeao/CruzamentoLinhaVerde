@@ -1,6 +1,6 @@
-Teste tela
-
-<app-semaforo></app-semaforo>
-<app-semaforo></app-semaforo>
-<app-semaforo></app-semaforo>
-<app-semaforo></app-semaforo>
+<div (mousedown)="click($event)">
+    <app-semaforo [status]="'aberto'" [posx]="100" [posy]="100"></app-semaforo>
+    <app-semaforo></app-semaforo>
+    <app-semaforo></app-semaforo>
+    <app-semaforo></app-semaforo>
+</div>

@@ -12,4 +12,8 @@ export class SemaforosComponent implements OnInit {
   ngOnInit() {
   }
 
+  click(e){
+    console.log(e);
+  }
+
 }

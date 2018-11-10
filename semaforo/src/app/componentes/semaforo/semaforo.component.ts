@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-semaforo',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemaforoComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  status:'fechado'|'aberto'|'atencao';
+  @Input()
+  posx:number;
+  @Input()
+  posy:number;
+
+  constructor() { 
+    this.status = "fechado";
+  }
 
   ngOnInit() {
+    
   }
 
 }
