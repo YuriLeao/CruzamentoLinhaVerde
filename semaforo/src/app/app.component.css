@@ -11,3 +11,10 @@
 
     padding: 24px 10px;
 }
+
+.semaforo{
+    width: 20px;
+    height: 40px;
+    background-color: grey;
+        
+}
