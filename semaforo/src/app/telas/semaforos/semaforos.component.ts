@@ -12,8 +12,8 @@ export class SemaforosComponent implements OnInit {
   ngOnInit() {
   }
 
-  click(e){
-    console.log(e);
+  click(e: MouseEvent) {
+    alert(`x ${e.x} y ${e.y}`)
   }
 
 }

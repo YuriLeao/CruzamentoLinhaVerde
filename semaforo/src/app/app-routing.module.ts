@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SemaforosComponent } from './telas/semaforos/semaforos.component';
 
 const routes: Routes = [{
-  path: 'tela', component: SemaforosComponent
+  path: '', component: SemaforosComponent
 }];
 
 @NgModule({

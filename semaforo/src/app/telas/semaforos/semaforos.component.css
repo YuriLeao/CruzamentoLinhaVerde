@@ -4,12 +4,27 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
+    display: flex;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
   
     padding: 24px 10px;
+
+    pointer-events: all;
+    user-select: all;
   } 
   
-  
+  button{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: transparent;
+    border: none;
+   
+  }
