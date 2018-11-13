@@ -1,6 +1,9 @@
-<button (mousedown)="click($event)"></button>
+<button class="editar" (mousedown)="click($event)"></button>
 
 <div>
     <app-semaforo *ngFor="let semaforo of semaforos" [status]="semaforo.status" [posx]="semaforo.x" [posy]="semaforo.y"
         [pedestre]="semaforo.pedestre"></app-semaforo>
+</div>
+<div class="controles">
+    <button (click)="limpar()">Limpar</button>
 </div>
